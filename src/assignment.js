@@ -3,6 +3,7 @@
 const assignment = {};
 // ========================
 
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 /**
  * Challenge - 1
@@ -14,9 +15,17 @@ const assignment = {};
  * @returns number the sum of the numbers
  */
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+    // return arrayOfNumbers.length;
+
+    let total = 0;
+    for (let numbers of arrayOfNumbers) {
+        total += numbers;
+    }
+
+    return total;
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+assignment.sumOfNumbers = sumOfNumbers;
+console.log(sumOfNumbers(numbers));
 
 /**
  * Challenge - 2
@@ -27,10 +36,19 @@ function sumOfNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
+
+var countEvenNumbers = arrayOfNumbers => {
+const evenNumbers = arrayOfNumbers.filter(x => x % 2 === 0)
+
+return evenNumbers
+}
+
 function countEvenNumbers(arrayOfNumbers) {
     return arrayOfNumbers.length;
+
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+assignment.countEvenNumbers = countEvenNumbers;
+console.log(countEvenNumbers(numbers));
 
 /**
  * Challenge - 3
@@ -51,9 +69,7 @@ function celsiusToFahrenheit(arrayOfNumbers) {
 }
 // assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
-
 // ========================
 // DO NOT EDIT THIS BLOCK
 module.exports = assignment;
 // ========================
-
