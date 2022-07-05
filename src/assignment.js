@@ -37,18 +37,17 @@ assignment.sumOfNumbers = sumOfNumbers;
  * @returns number the count of even numbers
  */
 
-var countEvenNumbers = arrayOfNumbers => {
-const evenNumbers = arrayOfNumbers.filter(x => x % 2 === 0)
-
-return evenNumbers
-}
-
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
-
+    let count = 0;
+    for (let x=0; x < arrayOfNumbers; x++) {
+        if (arrayOfNumbers[x] % 2 === 0) {
+            count++;
+        }
+    }
+    return count;
+    // return arrayOfNumbers.length;
 }
 assignment.countEvenNumbers = countEvenNumbers;
-// console.log(countEvenNumbers(numbers));
 
 /**
  * Challenge - 3
